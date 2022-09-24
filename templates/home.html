@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="{% static 'images/7.jpg' %}" width="250" height="150">
+	<a href="{% url 'reg' %}"> click</a>
+	{{request.user}}
+
+
+	<a href="{% url 'logout' %}"><button>Logout</button></a>
+
+</body>
+</html>

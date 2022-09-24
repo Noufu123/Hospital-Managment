@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addleave</title>
+</head>
+<style>
+	.demo1{
+		border: none;
+		margin-right: 300px;
+		margin-left: 400px;
+		padding-left: 100px;
+		margin-top: 50px;
+		background-color: #f6f1ef;
+		border-radius: 20px;
+	}
+	body{
+		background-color: white;
+	}
+</style>
+<body>
+	<div class="container">
+		<center><b><h1>Add_Leave</h1></b></center>
+		<div class="demo1">
+		<table>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br><br>
+				<label>Department:</label>
+				{{form.department}}
+				<br><br>
+				<label>Name:</label>
+				{{form.name}}
+				<br><br>
+				<label>Leave_Type:</label>
+				{{form.leave_type}}
+				<br><br>
+				<label>Start_date:</label>
+				{{form.Start_date}}
+				<br><br>
+				<label>End_date</label>
+				{{form.end_date}}
+				<br><br>
+				<!-- <label>Approvel_status</label>
+				{{form.approvel_status}}
+				<br><br> -->
+				<center><button class="btn btn-primary">Book</button></center>
+				<br><br>
+			</form>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>addleave</title>
+</head>
+<body>
+	<form method="POST" enctype="multiple/form-data">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button>add</button>		
+	</form>
+</body>
+</html> -->

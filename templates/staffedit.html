@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>edit</title>
+</head>
+<body>
+	<form method="POST" enctype="multiple/from-data">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button>Update</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+	
+</style>
+<body>
+	<div class="container">
+		<center><h1>UserView</h1></center>
+	<table class="table">
+		<thead class="thead-dark">
+		<tr>
+			<th>user</th>
+			<th>age</th>
+			<th>address</th>
+			<th>id_card</th>
+			<th></th>
+		</tr>
+		</thead>
+		{% for i in user %}
+		<tr>
+			<th><a href="{% url 'userdetail' i.id %}">{{i.user}}</a></th>
+			<th>{{i.age}}</th>
+			<th>{{i.address}}</th>
+			<th><img src="{{i.id_card.url}}" height="100px" width="100px"></th>
+			<th><a href="{% url 'edit' i.id %}">Edit</a></th>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+</body>
+</html>

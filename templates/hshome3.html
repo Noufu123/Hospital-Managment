@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,500&display=swap');
+	.demo1{
+		padding-top: 10px;
+		background-color: white;
+	}
+	.demo2{
+		background-color: #f6f1ef;
+	}
+	.demo3{
+		width: 60px;
+		border-style: none;
+		margin-top: 20px;
+	}
+	.demo4{
+		text-align: left;
+		width: 250px;
+		border-style: none;
+		margin-left: 100px;
+		margin-top: -80px;
+		height: 100px;
+	}
+	.demo5{
+		/*padding-left: 600px;*/
+		padding-top: 20px;
+		background-color: white;
+		border-style: none;
+		width: 500px;
+		margin-left: 650px;
+		margin-top: -120px;
+	}
+	.demo6{
+		background-color: #f5ebe2;
+		height: 450px;
+	}
+	.demo7{
+		margin-top: 40px;
+		border-style: none;
+		width: 505px;
+		height: 330px;
+	}
+	.demo8{
+		border-style: none;
+		width: 500px;
+		height: 50px;
+		margin-left: 600px;
+		margin-top: -180px;
+		color: #4f3f3d;
+	}
+	.demo9{
+		padding-top: 10px;
+	}
+	.demo10{
+		font-family: 'Open Sans', sans-serif;
+	}
+	.demo11{
+		font-family: 'Open Sans', sans-serif;
+	}
+	#demo12{
+		color: #4d4845;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="demo1">
+			<center><b><p>Welcome To {{request.user}}</p></b></center>
+			<div class="demo2">
+				<ul class="nav nav-pills">
+					<li id="demo12" class="demo9">
+						 24/7 Emergency:9645872253
+					</li>
+					<li id="demo12" class="demo9">
+						CovidCare@Home:9645222853
+					</li>
+					<li id="demo12" class="demo9">
+						Help Desk:04363246949
+					</li>
+					{% if user.is_authenticated %}
+					<li>
+						<a id="demo12" href="{% url 'appoinment' %}">Book an Appointment</a>
+					</li>
+					{% endif %}
+					<img src="{% static 'images/2.png' %}" width=40px;>
+					<img src="{% static 'images/1.png' %}" width=40px;>
+				</ul>
+			</div>
+			<div class="demo3">
+				<img src="{% static 'images/4.jpg' %}"width=80px;>
+			</div>
+			<div id="demo12" class="demo4">
+				<h1>AM Hospital</h1>
+			</div>
+			<div class="demo5">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+    					<a id="demo12" href="{% url 'department' %}"><b>Department</b></a>
+					<li>
+						<a id="demo12" href="{% url 'hscontact' %}"><b>Contact Us</b></a>
+					</li>
+					<li>
+						<a id="demo12" href="{% url 'hsabout' %}"><b>About Us</b></a>
+					</li>		
+					
+					{% if user.is_authenticated %}
+					<li>
+						<a id="demo12" href="{% url 'logout' %}"><b>Logout</b></a>
+					</li>
+					{% else %}
+					<li>
+						<a id="demo12" href="{% url 'hslogin' %}"><b>Login</b></a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+			<div class="demo6">
+				<div class="demo7">
+					<img src="{% static 'images/9.jpg' %}" width="500" height="450">
+				</div>
+				<div class="demo8">
+					<h1 class="demo10"><b>Health.Hope.Happiness</b></h1>
+					<h4 class="demo11">These are not just three words.<br>This is our promise to the people.<br>This is our new spirit.</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

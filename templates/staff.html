@@ -1,0 +1,305 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regisgtration</title>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.demo1{
+		background-color: white;
+	}
+	.demo2{
+		text-align: left;
+		width: 250px;
+		border-style: none;
+		margin-left: 100px;
+		margin-top: -100px;
+		height: 100px;
+	}
+	.demo3{
+		padding-top: 20px;
+		background-color: white;
+		border-style: none;
+		width: 500px;
+		margin-left: 650px;
+		margin-top: -100px;
+	}
+	.demo4{
+		border-style: none;
+		margin-top: 40px;
+		height: 950px;
+		background-color: #f6f1ef;
+	}
+	.demo5{
+		border-style: none;
+		width: 680px;
+		height: 850px;
+		border-radius: 10px;
+		background-color: white;
+		margin-left: 160px;
+	}
+	.demo6{
+		margin-right: 300px;
+		padding: 50px;
+	}
+	.demo7{
+		margin-right: 300px;
+		margin-top: -100px;
+		padding: 50px;
+	}
+	.demo8{
+		margin-left: 350px;
+		margin-top: -130px;
+	}
+	.demo10{
+		margin-top: 20px;
+	}
+	input{
+		width: 250px;
+		background-color: #f6f1ef;
+		border:1px solid lightgray;
+	}
+	button{
+		width: 250px;
+		background-color: #4f3f3d;
+		border-radius: 5px;
+		color: white;
+	}
+	#demo9{
+		color: #4d4845;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="demo1">
+			<img src="{% static 'images/4.jpg' %}"width=80px;>
+		</div>
+		<div id="demo9" class="demo2"><br>
+			<h1 id="demo9">AM Hospital</h1>
+		</div>	
+		<div class="demo3"><br>
+			<ul class="nav nav-pills">
+				<li class="dropdown">
+    				<a id="demo9" href="{% url 'department' %}"><b>Department</b></a>
+    					<!-- <span class="caret"></span></a>
+    				<ul class="dropdown-menu"><br> -->
+    					<!-- <li>
+    						<a id="demo9" href="#"><b>General Medicine</b></a>
+    					</li>
+    					<li>
+    						<a id="demo9" href="#"><b>Ophthalmology</b></a>
+    					</li>
+    					<li> 
+    						<a  id="demo9" href="#"><b>ENT</b></a>
+    					</li>
+    				</ul> -->
+					<li>
+						<a id="demo9" href="{% url 'hscontact' %}"><b>Contact Us</b></a>
+					</li>
+					<li>
+						<a id="demo9" href="{% url 'hsabout' %}"><b>About Us</b></a>
+					</li>		
+					<li>
+						<a id="demo9" href="{% url 'hshome3' %}"><b>Logout</b></a>
+					</li>
+				</li>
+			</ul>
+		</div>
+		<div class="demo4">
+			<br><br><br><br>
+			<div class="demo5">
+				<div class="demo6">
+					<h2 id="demo9" class="demo10"><b>Sign Up</b></h2>
+				</div>
+				<h6 id="demo9" class="demo7"><b>Get AM online services.<br>Access all your helth records.</b></h6>
+				<div class="demo8">
+					<form method="POST" enctype="multiple/form-data">
+					{% csrf_token %}
+					<label>User_Name</label>
+					<br>
+					{{form.username}}
+					<br>
+					<label>First_Name</label>
+					<br>
+					{{form.first_name}}
+					<br>
+					<label>Last_Name</label>
+					<br>
+					{{form.last_name}}
+					<br>
+					<label>Password</label>
+					<br>
+					{{form.password1}}
+					<br>
+					<label>Confirm_Password</label>
+					<br>
+					{{form.password2}}
+					<br>
+					<label>Email</label>
+					<br>
+					{{form.email}}
+					<br>
+					<label>Staff_Status</label>
+					<div style="margin-top: -18px;">{{form.is_staff}}</div>
+					<br>
+					<label>Age</label>
+					<br>
+					{{extend_form.age}}
+					<br>
+					<label>Address</label>
+					<br>
+					{{extend_form.address}}
+					<br>
+					<label>Profile</label>
+					{{extend_form.profile}}
+					<br>
+					<button>Add</button>
+				</form>
+					<h6 id="demo9">Already have an account.<a id="demo9" href="{% url 'hslogin' %}"><u><b>Sign In</b></u></a></h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Add Staff</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="demo1">
+			<table>
+				<form method="POST" enctype="multiple/form-data">
+					{% csrf_token %}
+					<br><br>
+					<label>User_Name</label>
+					{{form.username}}
+					<br><br>
+					<label>First_Name</label>
+					{{form.first_name}}
+					<br><br>
+					<label>Last_Name</label>
+					{{form.last_name}}
+					<br><br>
+					<label>Password</label>
+					{{form.password1}}
+					<br><br>
+					<label>Confirm_Password</label>
+					{{form.password2}}
+					<br><br>
+					<label>Email</label>
+					{{form.email}}
+					<br><br>
+					<label>Staff_Status</label>
+					{{form.is_staff}}
+					<br><br>
+					<label>Age</label>
+					{{extend_form.age}}
+					<br><br>
+					<label>Address</label>
+					{{extend_form.address}}
+					<br><br>
+					<label>Profile</label>
+					{{extend_form.idcard}}
+					<br><br>
+					<button>Add</button>
+				</form>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form.as_p}}
+		{{extend_form.as_p}}
+		<button>add</button>	
+	</form>
+</body>
+</html> -->

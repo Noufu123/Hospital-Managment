@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+  <title>Staff Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: white;width: cover; height: 1000px;">
+		<div class="box" style="background-color: #f6f1ef;width: 400px; height: 1000px; margin-left: 50px;">
+			<center>
+				<br><br><br>
+				<img src="{% static 'images/4.jpg' %}" style="border-radius: 20px; width: 50px;">
+				<h1><b>AM Hospital</b></h1>
+				<!-- <h5 style="margin-top: -15px;">JOB SITE</h5> -->
+				<nav class="navbar bg-light">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="{% url 'appoinment/staff/view/' %}"> Appoinment</a></li>
+						<br>
+						<li class="nav-item"><a class="nav-link" href="{% url 'addleave' %}"> Add_Leave</a></li>
+						<br>
+						<li class="nav-item"><a class="nav-link" href="{% url 'leaveview' %}">Leave_View</a></li>
+						<br>
+						<li class="nav-item"><a class="nav-link" href="{% url 'medicine' %}">View_Medicine</a></li>
+						<br>
+						<li class="nav-item"><a class="nave-link" href="{% url 'logout' %}">Logout</a></li>
+					</ul>
+				</nav>
+				<div class="copyright-text" style="margin-top: 200px;">
+					<p>Copyright 2020</p>
+				</div>
+			</center>
+		</div>
+		<div style="margin-top: -1000px; margin-left: 580px; border-radius: 20px;">
+			<img src="{% static 'images/22.jpg' %}" width="500" >
+			<div class="section-heading">
+				<br><br>
+				<h2> Introducing </h2>
+				<div class="line-dec" style="border-top: solid; width: 430px"></div>
+					<br>
+					<span>At AM, the founders believe that quality healthcare is the right of every<br>human
+						The vision for AM was to create an outstanding tertiary healthcare<br> facility and provide
+						unparalleled clinical care and patient experience in the<br>beautiful city of Calicut. Right from
+						its inception, Meitra was envisioned to be<br> a healthcare centre of international standards.
+						The infrastructure, medical<br> facilities, and clinical services were benchmarked against the
+						world's best<br> hospitals.
+						Meitra's patient-centric hospital design has resulted in a new kind<br> of hospital concept - The
+						Hospitel'- essentially merging the care of a hospital<br> and the luxury of a hotel, to create a
+						unique patient experience.</span>
+					<br><br><br>
+					<!-- <h3> STAFF </h3>
+					<p>Staff  represents the availability of job details and also they <br>can edit the details<br></p>
+					<div class="white-button">
+						<button><a href="#">ADD STAFF</a></button>
+					</div> -->
+					<div style="text-align: right; margin-top: -150px; margin-right: 110px">
+<!-- 						<img src="C:\Users\niyu\Desktop\picture\view (6).jpg" width="350"> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

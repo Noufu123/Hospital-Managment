@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>appoinmentdetail</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<center><h1>AppoinmentDetail</h1></center>
+	<table class="table table-striped">
+		
+			<tr>
+				<th>Name</th>
+				<td>{{user}}</td>
+			</tr>
+			<tr>
+				<th>Doctor_Name</th>
+				<td>{{doctorname}}</td>
+			</tr>
+			<tr>
+				<th>Department</th>
+				<td>{{department}}</td>
+			</tr>
+			<tr>
+				<th>Appoinment_Date</th>
+				<td>{{date}}</td>
+			</tr>
+			<tr>
+				<th>Appoinment_Time</th>
+				<td>{{time}}</td>
+			</tr>
+			<tr>
+				<th>Fees</th>
+				<td>{{fees}}</td>
+			</tr>
+		
+
+	</table>
+	<center><button class="btn btn-success"><a href="{% url 'pay' %}">PayNow</a></button></center>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Hi,{{user}}
+ You have booked an appoinment with 
+of 
+ on
+ for the time slot of  -->

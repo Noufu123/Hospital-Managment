@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>appoinment</title>
+</head>
+<style>
+	.demo1{
+		border: none;
+		margin-right: 300px;
+		margin-left: 400px;
+		padding-left: 100px;
+		margin-top: 50px;
+		background-color: #f6f1ef;
+		border-radius: 20px;
+	}
+	body{
+		background-color: white;
+	}
+</style>
+<body>
+	<div class="container">
+		<center><b><h1>Add Medicine</h1></b></center>
+		<div class="demo1">
+		<table>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br><br>
+				<label>Medicine_Nmae:</label>
+				{{form.medicine_name}}
+				<br><br>
+				<label>Quantity:</label>
+				{{form.quantity}}
+				<br><br>
+				<label>Mfd:</label>
+				{{form.mfd}}
+				<br><br>
+				<label>Expd:</label>
+				{{form.expd}}
+				<br><br>
+				<label>Price</label>
+				{{form.price}}
+				<br><br>
+				<center><button class="btn btn-primary">Book</button></center>
+				<br><br>
+			</form>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+

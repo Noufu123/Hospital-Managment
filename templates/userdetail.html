@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>detail</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<center><h1>UserDetail</h1></center>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>first_name</th>
+				<th>last_name</th>
+				<th>age</th>
+				<th>address</th>
+				<th>id_card</th>
+			</tr>
+			<tr>
+				<td>{{object.user.first_name}}</td>
+				<td>{{object.user.last_name}}</td>
+				<td>{{object.age}}</td>
+				<td>{{object.address}}</td>
+				<td><img src="{{object.id_card.url}}" height="100px" width="100px"></td>
+			</tr>
+		</thead>
+	</table>
+</div>
+</body>
+</html>
+

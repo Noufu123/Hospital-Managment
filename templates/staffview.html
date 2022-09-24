@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+	th{
+		color: black;
+		background-color: gray;
+		height: 50px;
+
+
+	}
+	body{
+		background-color: 
+	}
+</style>
+<body>
+	<div class="container">
+		<center><h1>StaffView</h1></center>
+	<center>
+	<table class="table">
+		<thead class="thead-dark">
+		<tr >
+			<th>user</th>
+			<th>age</th>
+			<th>address</th>
+			<th>profile</th>
+			<th></th>
+		</tr>
+	</thead>
+		{% for i in staff %}
+		<tr>
+			<th>{{i.user.id}}</th>
+			<th>{{i.age}}</th>
+			<th>{{i.address}}</th>
+			<th><img src="{{i.profile.url}}"></th>
+			<th><a href="{% url 'staffedit' i.user.id %}">Edit</a></th>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+</div>
+</body>
+</html>

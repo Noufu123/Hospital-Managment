@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contact</title>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.demo1{
+		padding-top: 10px;
+		background-color: white;
+	}
+	.demo2{
+		background-color: white;
+	}
+	.demo3{
+		text-align: left;
+		width: 250px;
+		border-style: none;
+		margin-left: 100px;
+		margin-top: -100px;
+		height: 100px;
+	}
+	.demo4{
+		padding-top: 20px;
+		background-color: white;
+		border-style: none;
+		width: 500px;
+		margin-left: 650px;
+		margin-top: -100px;
+	}
+	.demo5{
+		border-style: none;
+		margin-top: 110px;
+		height: 550px;
+		background-color:  #f6f1ef;
+	}
+	.demo6{
+		border-style: none;
+		width: 1000px;
+		height: 100px;
+		border-radius: 10px;
+		background-color: white;
+		margin-left: 70px;
+		margin-top: -50px;
+	}
+	.demo7{
+		border-style: none;
+		width: 1000px;
+		height: 320px;
+		border-radius: 10px;
+		background-color: white;
+		margin-left: 0px;
+		margin-top: 100px;
+	}
+	.demo6 h2{
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	.demo10{
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	.demo11{
+		padding-top: 20px;
+		padding-left: 30px
+	}
+	.demo12{
+		padding-top: 80px;
+		padding-left: 30px;
+	}
+	.demo13{
+		padding-top: 20px;
+		padding-left: 30px;
+	}
+	#demo9{
+		color: #4d4845;
+	}
+	#demo14{
+		color: red;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="demo1">
+			<div class="demo2">
+				<img src="{% static 'images/4.jpg' %}"width=80px;>
+			</div>
+			<div class="demo3"><br>
+				<h1 id="demo9">AM Hospital</h1>
+			</div>
+			<div class="demo4">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+    					<a id="demo9" href="{% url 'department' %}"><b>Department</b></a>
+    						<!-- <span class="caret"></span></a> -->
+    					<!-- <ul class="dropdown-menu"><br>
+    						<li>
+    							<a id="demo9" href="#"><b>General Medicine</b></a>
+    						</li>
+    						<li>
+    							<a id="demo9" href="#"><b>Ophthalmology</b></a>
+    						</li>
+    						<li> 
+    							<a  id="demo9" href="#"><b>ENT</b></a>
+    						</li>
+    					</ul> -->
+    					{% if user.is_authenticated %}
+					<li>
+						<a id="demo9" href="{% url 'hscontact' %}"><b>Contact Us</b></a>
+					</li>
+					{% endif %}
+					<li>
+						<a id="demo9" href="{% url 'hsabout' %}"><b>About Us</b></a>
+					</li>		
+					<li>
+						<a id="demo9" href="{% url 'hshome3' %}"><b>Logout</b></a>
+					</li>
+				</ul>
+			</div>
+			<div class="demo5">
+				<div class="demo6">
+					<h2 id="demo9" class="demo8"><b>Contact</b></h2>
+					<br><br>
+					<div class="demo7">
+						<h4 id="demo9" class="demo10"><b>In case of Emergency</b></h4>
+						<h5 id="demo9" class="demo11">Reach out to us and make a way to the hospital with necessary arrangment.</h5>
+						<h5 id="demo9" class="demo12">24/7HEPLDESK:04363246949</h5>
+						<h5 id="demo14" class="demo13">Emergency:+91 9645872253</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>appoinment</title>
+</head>
+<style>
+	.demo1{
+		border: none;
+		margin-right: 300px;
+		margin-left: 400px;
+		padding-left: 60px;
+		margin-top: 50px;
+		background-color: #f6f1ef;
+		border-radius: 20px;
+	}
+	body{
+		background-color: white;
+	}
+</style>
+<body>
+	<div class="container">
+		<!-- <center><b><h3>Welcome To {{request.user}}</h3></b></center> -->
+		<center><h2>Add_Department</h2></center>
+		<div class="demo1">
+		<table>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br><br>
+				<label>Dept_id:</label>
+				{{form.dept_id}}
+				<br><br>
+				<label>dept_name:</label>
+				{{form.dept_name}}
+				<br><br>
+				<label>fees:</label>
+				{{form.fees}}
+				<br><br>
+				<!-- {{form.as_p}} -->
+				<center><button class="btn btn-primary">Add</button></center>
+				<br><br>
+			</form>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button>add</button>
+	</form>
+</body>
+</html> -->

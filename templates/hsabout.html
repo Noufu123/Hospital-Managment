@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about</title>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.demo1{
+		padding-top: 10px;
+		background-color: white;
+	}
+	.demo2{
+		background-color: white;
+	}
+	.demo3{
+		text-align: left;
+		width: 250px;
+		border-style: none;
+		margin-left: 100px;
+		margin-top: -100px;
+		height: 100px;
+	}
+	.demo4{
+		padding-top: 20px;
+		background-color: white;
+		border-style: none;
+		width: 500px;
+		margin-left: 650px;
+		margin-top: -100px;
+	}
+	.demo5{
+		border-style: none;
+		margin-top: 40px;
+		height: 550px;
+		background-color:  #f6f1ef;
+	}
+	.demo6{
+		border-style: none;
+		width: 950px;
+		height: 400px;
+		border-radius: 10px;
+		background-color: white;
+		margin-left: 100px;
+	}
+	.demo7{
+		margin-right: 250px;
+		padding: 50px;
+		margin-top: -350px;
+
+	}
+	.demo8{
+		margin-right: 250px;
+		padding: 50px;
+		margin-top:	-80px;
+
+	}
+	#demo15{
+		margin-left: 550px;
+		margin-top: 80px;
+		border-radius: 10px;
+	}
+	#demo9{
+		color: #4d4845;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="demo1"> 
+			<div class="demo2">
+				<img src="{% static 'images/4.jpg' %}"width=80px;>
+			</div>
+			<div class="demo3"><br>
+				<h1 id="demo9">AM Hospital</h1>
+			</div>
+			<div class="demo4">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+    					<a id="demo9" href="{% url 'department' %}"><b>Department</b></a>
+					<li>
+						<a id="demo9" href="{% url 'hscontact' %}"><b>Contact Us</b></a>
+					</li>
+					{% if user.is_authenticated %}
+					<li>
+						<a id="demo9" href="{% url 'hsabout' %}"><b>About Us</b></a>
+					</li>
+					{% endif %}		
+					<li>
+						<a id="demo9" href="{% url 'hshome3' %}"><b>Logout</b></a>
+					</li>
+				</ul>
+			</div>
+			<div class="demo5">
+				<br><br><br><br>
+				<div class="demo6">
+					<img id="demo15" src="{% static 'images/22.jpg' %}">
+					<h2 id="demo9" class="demo7"><b>ABOUT US</b></h2>
+					<h5 id="demo9" class="demo8">
+						At AM, the founders believe that quality healthcare is the right of every<br>human
+						The vision for AM was to create an outstanding tertiary healthcare<br> facility and provide
+						unparalleled clinical care and patient experience in the<br>beautiful city of Calicut. Right from
+						its inception, Meitra was envisioned to be<br> a healthcare centre of international standards.
+						The infrastructure, medical<br> facilities, and clinical services were benchmarked against the
+						world's best<br> hospitals.
+						Meitra's patient-centric hospital design has resulted in a new kind<br> of hospital concept - The
+						Hospitel'- essentially merging the care of a hospital<br> and the luxury of a hotel, to create a
+						unique patient experience.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+

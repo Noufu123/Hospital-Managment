@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regisgtration</title>
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.demo1{
+		background-color: white;
+	}
+	.demo2{
+		text-align: left;
+		width: 250px;
+		border-style: none;
+		margin-left: 100px;
+		margin-top: -100px;
+		height: 100px;
+	}
+	.demo3{
+		padding-top: 20px;
+		background-color: white;
+		border-style: none;
+		width: 500px;
+		margin-left: 650px;
+		margin-top: -100px;
+	}
+	.demo4{
+		border-style: none;
+		margin-top: 40px;
+		height: 950px;
+		background-color: #f6f1ef;
+	}
+	.demo5{
+		border-style: none;
+		width: 680px;
+		height: 850px;
+		border-radius: 10px;
+		background-color: white;
+		margin-left: 160px;
+	}
+	.demo6{
+		margin-right: 300px;
+		padding: 50px;
+	}
+	.demo7{
+		margin-right: 300px;
+		margin-top: -100px;
+		padding: 50px;
+	}
+	.demo8{
+		margin-left: 350px;
+		margin-top: -130px;
+	}
+	.demo10{
+		margin-top: 20px;
+	}
+	input{
+		width: 250px;
+		background-color: #f6f1ef;
+		border:1px solid lightgray;
+	}
+	button{
+		width: 250px;
+		background-color: #4f3f3d;
+		border-radius: 5px;
+		color: white;
+	}
+	#demo9{
+		color: #4d4845;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="demo1">
+			<img src="{% static 'images/4.jpg' %}"width=80px;>
+		</div>
+		<div id="demo9" class="demo2"><br>
+			<h1 id="demo9">AM Hospital</h1>
+		</div>	
+		<div class="demo3"><br>
+			<ul class="nav nav-pills">
+				<li class="dropdown">
+    				<a id="demo9" class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Department</b>
+    					<span class="caret"></span></a>
+    				<ul class="dropdown-menu"><br>
+    					<li>
+    						<a id="demo9" href="#"><b>General Medicine</b></a>
+    					</li>
+    					<li>
+    						<a id="demo9" href="#"><b>Ophthalmology</b></a>
+    					</li>
+    					<li> 
+    						<a  id="demo9" href="#"><b>ENT</b></a>
+    					</li>
+    				</ul>
+					<li>
+						<a id="demo9" href=""><b>Contact Us</b></a>
+					</li>
+					<li>
+						<a id="demo9" href=""><b>About Us</b></a>
+					</li>		
+					<li>
+						<a id="demo9" href=""><b>Login</b></a>
+					</li>
+				</li>
+			</ul>
+		</div>
+		<div class="demo4">
+			<br><br><br><br>
+			<div class="demo5">
+				<div class="demo6">
+					<h2 id="demo9" class="demo10"><b>Sign Up</b></h2>
+				</div>
+				<h6 id="demo9" class="demo7"><b>Get AM online services.<br>Access all your helth records.</b></h6>
+				<div class="demo8">
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						<p>Username</p>
+						{{form.username}}
+						<p>First_Name</p>
+						{{form.first_name}}
+						<p>Last_Name</p>
+						{{form.last_name}}
+						<p>Password</p>
+						{{form.password1}}
+						<p>Confirm Password</p>
+						{{form.password2}}
+						<p>Email</p>
+						{{form.email}}
+						<p>Age</p>
+						{{extend_form.age}}
+						<p>Address</p>
+						{{extend_form.address}}
+						<p>Id_card</p>
+						{{extend_form.id_card}}
+						<br><br>
+						<button>Sign Up</button>
+
+					</form>
+					<h6 id="demo9">Already have an account.<a id="demo9" href="{% url 'hslogin' %}"><u><b>Sign In</b></u></a></h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+

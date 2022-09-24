@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>appoinmentview</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+	input{
+		border-radius: 10px;
+		background-color: black;
+		color: white;
+	}
+</style>
+<body>
+	<div class="container">
+		<center><h1>AppoinmentView</h1></center>
+	<table class="table">
+		<thead class="thead-dark">
+		<tr>
+			<th>user</th>
+			<th>department</th>
+			<th>doctorname</th>
+			<th>appoinment_time</th>
+			<th>appoinment_date</th>
+			<th></th>
+			<!-- <form class="add_your_class" method="GET" action="appoinment_date" >
+    			<input class="add_your_class" type="search" name="search"> 
+    			<button class="add_your_class" type="submit"> Search </button>
+			</form> -->
+		</tr>
+		</thead>
+		{% for i in appoinment %}
+		{% if user.is_authenticated %}
+		{{ AddAppoinmentModel}}
+			<tr>
+				<td> {{i.user}}</td>
+				<td>{{i.department}}</td>
+				<td>{{i.doctorname}}</td>
+				<td>{{i.appoinment_time}}</td>
+				<td>{{i.appoinment_date}}</td>
+				<td><a href="{% url 'appoinmentedit' i.id %}">Edit</a></td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>appoinment</title>
+</head>
+<style>
+	.demo1{
+		border: none;
+		margin-right: 300px;
+		margin-left: 400px;
+		padding-left: 60px;
+		margin-top: 50px;
+		background-color: #f6f1ef;
+		border-radius: 20px;
+	}
+	body{
+		background-color: white;
+	}
+</style>
+<body>
+	<div class="container">
+		<center><b><h3>Welcome To {{request.user}}</h3></b></center>
+		<div class="demo1">
+		<table>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br><br>
+				<label>Department:</label>
+				{{form.department}}
+				<br><br>
+				<label>Doctor_Name:</label>
+				{{form.doctorname}}
+				<br><br>
+				<label>Appoinment_time:</label>
+				{{form.appoinment_time}}
+				<br><br>
+				<label>Appoinment_date:</label>
+				{{form.appoinment_date}}
+				<br><br>
+				<!-- {{form.as_p}} -->
+				<center><button class="btn btn-primary">Book</button></center>
+				<br><br>
+			</form>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+	
